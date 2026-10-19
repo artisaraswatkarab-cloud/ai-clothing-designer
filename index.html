@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your own fashion concepts with AI Style Studio.">
+  <title>Atelier AI | Your Fashion Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">A</span>
+      <span>ATELIER <span class="brand-light">AI</span></span>
+    </a>
+    <nav>
+      <a href="#explore">Explore</a>
+      <a href="#studio">Design Studio</a>
+    </nav>
+    <a class="nav-cta" href="#studio">Create a design ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow"><span class="dot"></span> YOUR PERSONAL AI FASHION STUDIO</p>
+        <h1>Your imagination.<br> <span>Your next outfit.</span></h1>
+        <p class="hero-description">
+          Turn your ideas into fashion concepts. Explore styles, experiment
+          with colors, and create a look that feels uniquely yours.
+        </p>
+        <a class="primary-btn" href="#studio">Start designing <span>↗</span></a>
+        <div class="hero-note">
+          <span>✳</span> A creative space for your next big idea
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="art-label">THE NEW COLLECTION <span>01 / 03</span></div>
+        <div class="hero-photo"></div>
+        <div class="floating-card">
+          <span class="mini-label">DESIGN YOUR WAY</span>
+          <strong>Made of<br>imagination.</strong>
+          <span class="card-arrow">↗</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="explore">
+      <div>
+        <span class="feature-number">01</span>
+        <h3>Find your style</h3>
+        <p>From timeless classics to modern streetwear.</p>
+      </div>
+      <div>
+        <span class="feature-number">02</span>
+        <h3>Play with color</h3>
+        <p>Explore color palettes for your next outfit.</p>
+      </div>
+      <div>
+        <span class="feature-number">03</span>
+        <h3>Make it yours</h3>
+        <p>Turn your preferences into a design brief.</p>
+      </div>
+    </section>
+
+    <section class="studio-section" id="studio">
+      <div class="section-heading">
+        <p class="eyebrow">THE CREATIVE PLAYGROUND</p>
+        <h2>Let's design something <em>beautiful.</em></h2>
+        <p>Tell us what you imagine. We'll help you shape the concept.</p>
+      </div>
+
+      <div class="studio-grid">
+        <form id="design-form" class="design-panel">
+          <div class="panel-title">
+            <span>YOUR DESIGN BRIEF</span>
+            <span class="step-tag">STEP 01</span>
+          </div>
+
+          <label for="clothing">What are we creating?</label>
+          <select id="clothing">
+            <option value="Dress">Dress</option>
+            <option value="T-shirt">T-shirt</option>
+            <option value="Jacket">Jacket</option>
+            <option value="Hoodie">Hoodie</option>
+            <option value="Kurta">Kurta</option>
+            <option value="Co-ord set">Co-ord set</option>
+            <option value="Formal suit">Formal suit</option>
+          </select>
+
+          <label for="style">Choose your aesthetic</label>
+          <select id="style">
+            <option value="Minimalist">Minimalist</option>
+            <option value="Streetwear">Streetwear</option>
+            <option value="Luxury">Luxury</option>
+            <option value="Traditional fusion">Traditional fusion</option>
+            <option value="Vintage">Vintage</option>
+            <option value="Casual chic">Casual chic</option>
+          </select>
+
+          <label>Choose your main color</label>
+          <div class="swatches">
+            <button type="button" class="swatch active" data-color="Black" style="--swatch:#202020" aria-label="Black" aria-pressed="true"></button>
+            <button type="button" class="swatch" data-color="Ivory" style="--swatch:#eee6d6" aria-label="Ivory" aria-pressed="false"></button>
+            <button type="button" class="swatch" data-color="Olive green" style="--swatch:#777d50" aria-label="Olive green" aria-pressed="false"></button>
+            <button type="button" class="swatch" data-color="Burgundy" style="--swatch:#7c243c" aria-label="Burgundy" aria-pressed="false"></button>
+            <button type="button" class="swatch" data-color="Powder blue" style="--swatch:#9ab9d3" aria-label="Powder blue" aria-pressed="false"></button>
+            <button type="button" class="swatch" data-color="Chocolate brown" style="--swatch:#78513e" aria-label="Chocolate brown" aria-pressed="false"></button>
+          </div>
+          <p class="selected-color">Selected: <span id="color-name">Black</span></p>
+
+          <label for="occasion">Design for</label>
+          <select id="occasion">
+            <option value="Everyday wear">Everyday wear</option>
+            <option value="College">College</option>
+            <option value="Party">Party</option>
+            <option value="Formal event">Formal event</option>
+            <option value="Festive occasion">Festive occasion</option>
+            <option value="Vacation">Vacation</option>
+          </select>
+
+          <label for="details">Your creative vision <span class="optional">(optional)</span></label>
+          <textarea id="details" rows="3" maxlength="300"
+            placeholder="E.g. oversized silhouette, embroidered details, breathable fabric..."></textarea>
+
+          <button class="primary-btn generate-btn" type="submit">
+            Create my design brief <span>↗</span>
+          </button>
+          <p class="form-hint">Concept generation · No account required</p>
+        </form>
+
+        <div class="preview-panel">
+          <div class="preview-top">
+            <span>YOUR CONCEPT</span>
+            <span class="live-dot">● LIVE PREVIEW</span>
+          </div>
+          <div class="preview-art" id="preview-art">
+            <span class="preview-watermark">A.</span>
+            <div class="garment-symbol" id="garment-symbol">✳</div>
+            <span class="preview-caption">A NEW IDEA, IN THE MAKING</span>
+          </div>
+          <div class="preview-info">
+            <div>
+              <span class="mini-label">YOUR CREATION</span>
+              <h3 id="preview-title">The Minimalist Dress</h3>
+            </div>
+            <span class="preview-index">01</span>
+          </div>
+          <div class="palette-line">
+            <span id="palette-dot"></span>
+            <span id="palette-text">Black palette</span>
+            <span class="palette-divider">/</span>
+            <span id="preview-occasion">Everyday wear</span>
+          </div>
+          <div class="result-box" id="result-box" aria-live="polite">
+            <span class="result-icon">✦</span>
+            <p>Your design brief will appear here when you're ready.</p>
+          </div>
+          <button id="copy-btn" class="secondary-btn" type="button" disabled>
+            Copy design brief ↗
+          </button>
+          <p class="preview-disclaimer">
+            This preview represents your design choices, not a generated clothing image.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <p class="eyebrow">GOOD STYLE STARTS WITH AN IDEA</p>
+      <h2>Dream it. Design it. <em>Define it.</em></h2>
+      <a href="#studio" class="text-link">Back to the studio ↑</a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#"><span class="brand-icon">A</span> ATELIER AI</a>
+    <p>Made for the love of fashion and creativity.</p>
+    <span>© <span id="year"></span> Atelier AI</span>
+  </footer>
+</body>
+</html>
